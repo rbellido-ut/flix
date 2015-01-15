@@ -1,0 +1,20 @@
+<article>
+  <header>
+    <h2><strong><%= @movie.title %></strong></h2>
+  </header>
+  <p><%= truncate @movie.description, length: 40, separator: ' ' %></p>
+  <table>
+    <tr>
+      <th>Rating: </th>
+      <td><%= @movie.rating %></td>
+    </tr>
+    <tr>
+      <th>Released: </th>
+      <td><%= @movie.released_on %> (<%= time_ago_in_words @movie.released_on %>) </td>
+    </tr>
+    <tr>
+      <th>Total Gross: </th>
+      <td><%= format_total_gross @movie %></td>
+    </tr>
+  </table>
+</article>
