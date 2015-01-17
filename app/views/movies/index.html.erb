@@ -2,7 +2,7 @@
 <% @movies.each do |movie| %>
   <article>
     <header>
-      <h2><strong><%= movie.title %></strong></h2>
+      <h2><strong><%= link_to movie.title, movie %></strong></h2>
     </header>
     <p><%= truncate movie.description, length: 40, separator: ' ' %></p>
     <table>
