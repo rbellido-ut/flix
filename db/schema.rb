@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20150114101509) do
 
-  create_table "movies", force: true do |t|
+  create_table "movies", force: :cascade do |t|
     t.string   "title"
     t.string   "rating"
     t.decimal  "total_gross"
