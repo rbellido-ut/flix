@@ -1,0 +1,22 @@
+<%= form_for(@movie) do |m| %>
+    <p>
+        <%= m.label :title %>
+        <%= m.text_field :title, autofocus: true%><br/>
+
+        <%= m.label :rating %>
+        <%= m.text_field :rating %><br/>
+
+        <%= m.label :total_gross %>
+        <%= m.number_field :total_gross %><br/>
+
+        <%= m.label :description %><br/>
+        <%= m.text_area :description, cols: 40, rows: 7 %><br/>
+
+        <%= m.label :released_on %>
+        <%= m.datetime_select :released_on %><br/>
+    </p>
+    <p>
+        <%= m.submit %>
+        | <%= link_to 'Cancel', movies_path %>
+    </p>
+<% end %>
