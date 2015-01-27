@@ -2,7 +2,7 @@
   <header>
     <h2><strong><%= @movie.title %></strong></h2>
   </header>
-  <p><%= truncate @movie.description, length: 40, separator: ' ' %></p>
+  <p><%= @movie.description%></p>
   <table>
     <tr>
       <th>Rating: </th>
@@ -19,3 +19,4 @@
   </table>
 </article>
 <%= link_to "All Movies", movies_path %>
+<%= link_to "Edit", edit_movie_path %>
