@@ -3,6 +3,7 @@
 <% @movies.each do |movie| %>
   <article>
     <header>
+      <%= image_for movie %>
       <h2><strong><%= link_to movie.title, movie %></strong></h2>
     </header>
     <p><%= truncate movie.description, length: 40, separator: ' ' %></p>
@@ -14,6 +15,14 @@
       <tr>
         <th>Released: </th>
         <td><%= movie.released_on %> (<%= time_ago_in_words movie.released_on %>) </td>
+      </tr>
+      <tr>
+        <th>Cast: </th>
+        <td><%= movie.cast %></td>
+      </tr>
+      <tr>
+        <th>Duration: </th>
+        <td><%= movie.duration %></td>
       </tr>
       <tr>
         <th>Total Gross: </th>

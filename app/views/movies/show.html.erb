@@ -2,6 +2,7 @@
   <header>
     <h2><strong><%= @movie.title %></strong></h2>
   </header>
+  <%= image_for @movie %>
   <p><%= @movie.description%></p>
   <table>
     <tr>
@@ -11,6 +12,18 @@
     <tr>
       <th>Released: </th>
       <td><%= @movie.released_on %> (<%= time_ago_in_words @movie.released_on %>) </td>
+    </tr>
+    <tr>
+      <th>Director: </th>
+      <td><%= @movie.director %></td>
+    </tr>
+    <tr>
+      <th>Cast: </th>
+      <td><%= @movie.cast %></td>
+    </tr>
+    <tr>
+      <th>Duration: </th>
+      <td><%= @movie.duration %></td>
     </tr>
     <tr>
       <th>Total Gross: </th>
