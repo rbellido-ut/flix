@@ -13,6 +13,8 @@ class Movie < ActiveRecord::Base
     message: "must be one of: G, PG, PG-13, R, NC-17"
   }
 
+  has_many :reviews, dependent: :destroy
+
   def self.released
     where("released_on <= ?", Time.now).order("released_on desc")
   end
